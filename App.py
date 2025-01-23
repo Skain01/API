@@ -54,6 +54,7 @@ def obtener_persona(id):
         return jsonify({'error': 'Persona no encontrada'}), 404
     return jsonify(dict(persona)), 200
 
+#Modificar info de users
 @app.route('/personas/<id>', methods=['PUT']) 
 def actualizar_persona(id):
     try:
@@ -69,7 +70,7 @@ def actualizar_persona(id):
     except Exception as e:
         return jsonify({"error": f"Error al actualizar la persona: {str(e)}"}), 500
 
-
+# Borrar personas
 @app.route('/personas/<id>', methods=['DELETE']) 
 def borrar_persona(id):
     conn = get_db_connection()
