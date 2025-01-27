@@ -1,2 +1,3 @@
 #es una buena idea ignorar el recién creado directorio env en su archivo .gitignore para evitar realizar un seguimiento de los archivos no relacionados con el proyecto.
 .venv
+personas.db
